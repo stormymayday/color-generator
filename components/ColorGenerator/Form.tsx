@@ -2,11 +2,16 @@
 
 import { useState, FormEvent } from "react";
 
-export default function Form() {
+interface FormProps {
+    addColor: (color: string) => void;
+}
+
+export default function Form({ addColor }: FormProps) {
     const [color, setColor] = useState<string>("");
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        addColor(color);
     };
     return (
         <section className="container">
