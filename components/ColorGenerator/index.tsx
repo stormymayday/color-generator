@@ -4,7 +4,7 @@ import Form from "./Form";
 import ColorList from "./ColorList";
 import Values from "values.js";
 import { useState } from "react";
-import { ToastContainer, toast } from "react-toastify";
+// import { ToastContainer, toast } from "react-toastify";
 
 function ColorGenerator() {
     const [colors, setColors] = useState<Values[]>(
@@ -18,9 +18,9 @@ function ColorGenerator() {
             // toast.success("color added");
         } catch (error: unknown) {
             if (error instanceof Error) {
-                toast.error(error.message);
+                // toast.error(error.message);
             } else {
-                toast.error("Oops! Something went wrong!");
+                // toast.error("Oops! Something went wrong!");
             }
         }
     };
@@ -29,7 +29,7 @@ function ColorGenerator() {
         <main>
             <Form addColor={addColor} />
             <ColorList colors={colors} />
-            <ToastContainer position="top-center" />
+            {/* <ToastContainer position="top-center" /> */}
         </main>
     );
 }
