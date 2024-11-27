@@ -19,8 +19,10 @@ function ColorGenerator() {
         } catch (error: unknown) {
             if (error instanceof Error) {
                 // toast.error(error.message);
+                alert(error.message);
             } else {
                 // toast.error("Oops! Something went wrong!");
+                alert("Oops! Something went wrong!");
             }
         }
     };
