@@ -7,13 +7,14 @@ import { useState } from "react";
 
 function ColorGenerator() {
     // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    const [colors, setColors] = useState([new Values("#f15025").all(10)]);
-    console.log(colors);
+    const [colors, setColors] = useState<Values[]>(
+        new Values("#f15025").all(10)
+    );
 
     return (
         <main>
             <Form />
-            <ColorList />
+            <ColorList colors={colors} />
         </main>
     );
 }
